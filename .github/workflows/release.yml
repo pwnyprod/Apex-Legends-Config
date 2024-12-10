@@ -63,6 +63,8 @@ jobs:
 
       - name: Upload each ZIP as release asset
         run: |
+          UPLOAD_URL="${{ steps.create_release.outputs.upload_url }}"
+          UPLOAD_URL_CLEANED=$(echo "$UPLOAD_URL" | sed 's/{?name,label}//')
           for file in dist/releases/*.zip; do
             filename=$(basename "$file")
             curl \
@@ -70,5 +72,5 @@ jobs:
               -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               -H "Content-Type: application/zip" \
               --data-binary @"$file" \
-              "${{ steps.create_release.outputs.upload_url }}?name=$filename"
+              "${UPLOAD_URL_CLEANED}?name=$filename"
           done
