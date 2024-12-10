@@ -43,7 +43,9 @@ jobs:
             found && /^## \[/ {exit}
             found
           ' CHANGELOG.md)
-          echo "notes=$NOTES" >> $GITHUB_OUTPUT
+          echo "notes<<EOF" >> $GITHUB_OUTPUT
+          echo "$NOTES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Create Git Tag
         run: |
