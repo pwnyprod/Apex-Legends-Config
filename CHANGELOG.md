@@ -8,7 +8,7 @@ This file is based on the Semver-Model ('Added', 'Changed', 'Removed').
 
 ## [1.0.0] - hello Champion
 
-📦 build: initialize Apex Legends configuration project
+:package: build: initialize Apex Legends configuration project
 
 ### Added
 

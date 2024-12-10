@@ -39,9 +39,9 @@ jobs:
         run: |
           VERSION=${{ steps.version.outputs.version }}
           NOTES=$(awk -v ver="$VERSION" '
-            $0 ~ "## \\[" ver "\\]" {found=1; next}  # Wenn Version gefunden, aktiviere found und springe zur nächsten Zeile
-            found && /^## \[/ {exit}                # Wenn eine neue Version beginnt, höre auf auszugeben
-            found                                   # Gib Zeilen aus, solange found aktiv ist und keine neue Version gefunden wurde
+            $0 ~ "## \\[" ver "\\]" {found=1; next}
+            found && /^## \[/ {exit}
+            found
           ' CHANGELOG.md)
           echo "notes=$NOTES" >> $GITHUB_OUTPUT
 
