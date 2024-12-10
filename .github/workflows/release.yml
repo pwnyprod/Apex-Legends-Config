@@ -31,14 +31,14 @@ jobs:
       - name: Extract new version from CHANGELOG
         id: version
         run: |
-          VERSION=$(grep -Eo "## \[[0-9]+\.[0-9]+\.[0-9]+\]" CHANGELOG.md | head -n 1 | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+")
+          VERSION=$(grep -Eo "## \[[0-9]+\.[0-9]+\.[0-9]+\]" CHANGELOG.md | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+" | head -n 1)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           
       - name: Extract release notes from CHANGELOG
         id: notes
         run: |
           VERSION=${{ steps.version.outputs.version }}
-          NOTES=$(awk "/## \\[$VERSION\\]/,/## \\[/{print}" CHANGELOG.md | head -n -1 | tail -n +2)
+          NOTES=$(awk "/## \\[$VERSION\\]/,/## \\[/" CHANGELOG.md | head -n -1 | tail -n +2)
           echo "notes=$NOTES" >> $GITHUB_OUTPUT
 
       - name: Create Git Tag
