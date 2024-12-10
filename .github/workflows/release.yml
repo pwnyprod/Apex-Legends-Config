@@ -38,7 +38,11 @@ jobs:
         id: notes
         run: |
           VERSION=${{ steps.version.outputs.version }}
-          NOTES=$(awk "/## \\[$VERSION\\]/,/## \\[/" CHANGELOG.md | head -n -1 | tail -n +2)
+          NOTES=$(awk -v ver="$VERSION" '
+            $0 ~ "## \\[" ver "\\]" {found=1; next}  # Wenn Version gefunden, aktiviere found und springe zur nächsten Zeile
+            found && /^## \[/ {exit}                # Wenn eine neue Version beginnt, höre auf auszugeben
+            found                                   # Gib Zeilen aus, solange found aktiv ist und keine neue Version gefunden wurde
+          ' CHANGELOG.md)
           echo "notes=$NOTES" >> $GITHUB_OUTPUT
 
       - name: Create Git Tag
