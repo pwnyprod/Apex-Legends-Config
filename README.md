@@ -1,21 +1,63 @@
-# 🤝Thanks
-- Thanks to the people who forked my config and kept it alive 🫡
+# Apex Legends Configuration Guide (English)
+> [Deutsche Readme Version hier](./README.de.md)
 
-# CFG Files 
-1. [Download](https://github.com/pwnyprod/Apex-Autoexec-And-Tweaks-/archive/refs/heads/main.zip) and extract it.
-2. Move [autoexec.cfg](https://github.com/pwnyprod/Apex-Autoexec-And-Tweaks-/blob/main/autoexec.cfg) to the games directory cfg folder (Usually in C:\Program Files (x86)\Steam\steamapps\common\Apex Legends\cfg).
-3. Rightclick on the game inside of Steam and go to "Properties".
-4. Switch to the "General" Tab.
-5. Add the command in launch options "+exec autoexec.cfg -high -dev" (without the Quotation marks).
+This guide explains how to use specially tailored configuration files for Apex Legends to enhance your gaming experience. The provided packages include both video settings and basic game settings, adjusted to different needs.
 
-| Command | Description |
-| --- | --- |
-| `+exec` | Executes a cfg file on startup |
-| `-dev` | Skips EA intro on startup, can cause HUD flicker issues on NVIDIA cards |
-| `-fullscreen` | Forces the game to launch in fullscreen mode |
-| `-high` | Attempts to set the game's priority to "high" for Windows resources |
+## What is this about?
 
-# Videoconfig
-6. Press Win+R while you are on your desktop.
-7. Paste this inside the Run box: "%USERPROFILE%\Saved Games\Respawn\Apex\local" (without the Quotation marks).
-8. Move [videoconfig.txt](https://github.com/pwnyprod/Apex-Autoexec-And-Tweaks-/blob/main/videoconfig.txt) in it.
+- **autoexec.cfg:**  
+  This file package includes settings that are loaded automatically at game start. You can define things like maximum framerate (fps), graphic settings, and audio adjustments here. Different variants focus on different goals:
+  - **competitive:** Optimized for maximum performance and stability. Settings are chosen to achieve very high frame rates, often at the expense of visual detail.
+  - **quality:** A balanced approach, offering good image quality and solid performance.
+  - **ultraquality:** Maximizes visual fidelity with high-resolution textures and effects, recommended for high-end PCs.
+
+- **videoconfig.txt:**  
+  This file controls resolution and other video settings. Various resolution presets are provided:
+  - **720p:** Lower resolution to conserve resources and maximize FPS, ideal if performance is more important than graphics.
+  - **1080p:** Standard quality and resolution, a good compromise for most players.
+  - **1440p:** Higher detail level than 1080p, requires more system power.
+  - **4k:** Very high resolution with sharp details, recommended for powerful hardware.
+
+## Installing the Configurations
+
+1. **Choosing a Package:**  
+   Download one of the prepared packages from the [Releases](https://github.com/pwnyprod/Apex-Legends-Config/releases). These packages combine an `autoexec.cfg` variant and a `videoconfig.txt` variant.
+
+2. **Installing autoexec.cfg:**  
+   - Extract the downloaded package.
+   - Move the `autoexec.cfg` file into the game's `cfg` folder.  
+     For Steam installations, this is usually:  
+     `C:\Program Files (x86)\Steam\steamapps\common\Apex Legends\cfg`
+   
+3. **Installing videoconfig.txt:**  
+   - Press `Win + R` on your keyboard.
+   - Paste this path into the Run dialog and press Enter:  
+     `%USERPROFILE%\Saved Games\Respawn\Apex\local`
+   - Copy `videoconfig.txt` into this directory, overwriting the existing file if necessary.
+
+4. **Game Launch Parameters:**  
+   - In your Steam Library, right-click Apex Legends and select "Properties".
+   - Go to the "General" tab.
+   - Add the following in the Launch Options field:  
+     `+exec autoexec.cfg -high -dev`  
+     This ensures your chosen package loads on game start and attempts to run the game at a higher priority.
+
+## Additional Tips
+
+- You can switch between different packages by choosing another `autoexec.cfg` and `videoconfig.txt` from the release packages and placing them as described above.
+- If you want to apply changes to the `autoexec.cfg` without restarting the game, open the game console (if enabled via launch options) and type `exec autoexec.cfg`.
+- If you experience performance issues or poor visuals, try simpler variants first (e.g. `competitive` with `720p`). If your PC is more powerful, move on to higher quality packages.
+
+## Common Keybinds in autoexec
+
+- **F3:** `disconnect` – Quickly disconnects from the server in case of severe lag.
+- **F4:** `miles_reboot; miles_stop_all` – Restarts the audio engine if you encounter sound issues.
+- **F5:** `toggle showfps_enabled 0 1 2` – Toggles FPS display and additional performance graphs.
+- **F6:** `toggle shownet_enabled` – Displays network graphs to monitor connection stability.
+- **F7:** `exec autoexec.cfg` – Reloads the current autoexec file to apply changes immediately.
+
+## General Advice
+
+- Experiment with various combinations to find the optimal balance between visual quality and performance.
+- If you have older or weaker hardware, start with performance-focused variants.
+- For high-resolution monitors or powerful hardware, go for the higher-quality variants to enhance your gaming experience.
