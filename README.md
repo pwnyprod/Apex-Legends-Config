@@ -47,6 +47,17 @@ This guide explains how to use specially tailored configuration files for Apex L
      `+exec autoexec.cfg -high -dev`  
      This ensures your chosen package loads on game start and attempts to run the game at a higher priority.
 
+#### **Additional Launch Parameters:**
+
+| Command | Description |
+| --- | --- |
+| `+exec` | Executes a cfg file on startup |
+| `-dev` | Skips EA intro on startup, can cause HUD flicker issues on NVIDIA cards |
+| `-fullscreen` | Forces the game to launch in fullscreen mode |
+| `-high` | Attempts to set the game's priority to "high" for Windows resources |
+| `-anticheat_settings=SettingsDX11.json` | Forces the game to launch in DX11|
+| `-anticheat_settings=SettingsDX12.json` | Forces the game to launch in DX12|
+
 ## Additional Tips
 
 - You can switch between different packages by choosing another `autoexec.cfg` and `videoconfig.txt` from the release packages and placing them as described above.

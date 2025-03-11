@@ -158,6 +158,41 @@ svg { z-index: 99; position: fixed; border: 0px; top: 0px; right: 0; }
         </ul>
       </li>
     </ol>
+    <h4 id="additional-launch-parameters"><a class="anchor" aria-hidden="true" tabindex="-1" href="#additional-launch-parameters"><span class="octicon octicon-link"></span></a><strong>Additional Launch Parameters:</strong></h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>+exec</code></td>
+          <td>Executes a cfg file on startup</td>
+        </tr>
+        <tr>
+          <td><code>-dev</code></td>
+          <td>Skips EA intro on startup, can cause HUD flicker issues on NVIDIA cards</td>
+        </tr>
+        <tr>
+          <td><code>-fullscreen</code></td>
+          <td>Forces the game to launch in fullscreen mode</td>
+        </tr>
+        <tr>
+          <td><code>-high</code></td>
+          <td>Attempts to set the game's priority to "high" for Windows resources</td>
+        </tr>
+        <tr>
+          <td><code>-anticheat_settings=SettingsDX11.json</code></td>
+          <td>Forces the game to launch in DX11</td>
+        </tr>
+        <tr>
+          <td><code>-anticheat_settings=SettingsDX12.json</code></td>
+          <td>Forces the game to launch in DX12</td>
+        </tr>
+      </tbody>
+    </table>
     <h2 id="additional-tips"><a class="anchor" aria-hidden="true" tabindex="-1" href="#additional-tips"><span class="octicon octicon-link"></span></a>Additional Tips</h2>
     <ul>
       <li>You can switch between different packages by choosing another <code>autoexec.cfg</code> and <code>videoconfig.txt</code> from the release packages and placing them as described above.</li>
