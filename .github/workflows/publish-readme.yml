@@ -17,7 +17,7 @@ jobs:
       - name: Convert README to HTML
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
-          source: README.md ./**/*.md
+          source: ./**/*.md
           output: dist
           github-corners: https://github.com/${{ github.repository }}
           dark-mode: true
