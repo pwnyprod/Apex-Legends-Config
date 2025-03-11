@@ -1,7 +1,10 @@
 [![Build and Release](https://github.com/pwnyprod/Apex-Legends-Config/actions/workflows/release.yml/badge.svg)](https://github.com/pwnyprod/Apex-Legends-Config/actions/workflows/release.yml)
+[![Publish README to GitHub Pages](https://github.com/pwnyprod/Apex-Legends-Config/actions/workflows/publish-readme.yml/badge.svg)](https://github.com/pwnyprod/Apex-Legends-Config/actions/workflows/publish-readme.yml)
 
 # Apex Legends Configuration Guide (English)
 > [Deutsche Readme Version hier](./README.de.md)
+>
+> [Release Changelog](./CHANGELOG.md)
 
 This guide explains how to use specially tailored configuration files for Apex Legends to enhance your gaming experience. The provided packages include both video settings and basic game settings, adjusted to different needs.
 
