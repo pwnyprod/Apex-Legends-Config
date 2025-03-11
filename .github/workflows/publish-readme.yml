@@ -17,8 +17,8 @@ jobs:
       - name: Convert README to HTML
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
-          source: README.md
-          output: index.html
+          source: README.md ./**/*.md
+          output: dist
           github-corners: https://github.com/${{ github.repository }}
           dark-mode: true
           title: "PwnyProd's Apex Config Dokumentation"
@@ -28,4 +28,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: dist
