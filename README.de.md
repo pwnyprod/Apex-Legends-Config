@@ -48,6 +48,17 @@ Diese Anleitung zeigt dir, wie du speziell abgestimmte Konfigurationsdateien fü
      `+exec autoexec.cfg -high -dev`  
      Dadurch wird dein gewähltes Paket beim Spielstart automatisch geladen und das Spiel versucht mit höherer Priorität zu laufen.
 
+#### **erweiterte Startoptionen:**
+
+| Command | Description |
+| --- | --- |
+| `+exec` | Führt eine CFG-Datei beim Spielstart aus. |
+| `-dev` | Überspringt das EA-Intro beim Spielstart; kann auf NVIDIA-Karten HUD-Flackern verursachen. |
+| `-fullscreen` | Erzwingt, dass das Spiel im Vollbildmodus startet. |
+| `-high` | Versucht, die Priorität des Spiels unter Windows auf „hoch“ zu setzen. |
+| `-anticheat_settings=SettingsDX11.json` | Erzwingt den Start des Spiels im DX11-Modus. |
+| `-anticheat_settings=SettingsDX12.json` | Erzwingt den Start des Spiels im DX12-Modus. |
+
 ## Zusätzliche Hinweise
 
 - Du kannst jederzeit zwischen den verschiedenen Paketen wechseln, indem du einfach die gewünschte `autoexec.cfg` und `videoconfig.txt` aus den Release-Paketen auswählst und wie oben beschrieben einfügst.
