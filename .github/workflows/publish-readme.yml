@@ -22,7 +22,6 @@ jobs:
           github-corners: https://github.com/${{ github.repository }}
           dark-mode: true
           title: "PwnyProd's Apex Config Dokumentation"
-          recursive: true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
