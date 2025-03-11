@@ -1,3 +1,5 @@
+[![Build and Release](https://github.com/pwnyprod/Apex-Legends-Config/actions/workflows/release.yml/badge.svg)](https://github.com/pwnyprod/Apex-Legends-Config/actions/workflows/release.yml)
+
 # Apex Legends Configuration Guide (English)
 > [Deutsche Readme Version hier](./README.de.md)
 
